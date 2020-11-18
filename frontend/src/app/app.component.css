@@ -1,0 +1,25 @@
+.top-menu {
+    background: #a15703;
+    padding: 2px 15px;    
+}
+
+#text {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+
+.button {
+  background-color: rgb(145, 87, 12); 
+  border: black;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: table-column;
+  font-size: 16px;
+  margin: 2px 1px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}

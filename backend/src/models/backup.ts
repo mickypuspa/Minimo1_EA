@@ -3,7 +3,7 @@ import { model, Schema, Document } from 'mongoose';
 export interface IBackup extends Document{
     date: number;
     direction: string;
-    state: boolean;
+    state: string;
     error: string;
     user: string;
 }
@@ -16,7 +16,7 @@ const backupSchema = new Schema({
         type: String
     },
     state: {
-        type: Boolean
+        type: String
     },
     error: {
         type: String

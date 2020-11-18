@@ -34,7 +34,7 @@ const updateBackup = async (req: Request, res: Response) => {
     const id: string = req.params.id;
     const date: number = req.body.number;
     const direction: string = req.body.direction;
-    const state: boolean = req.body.state;
+    const state: string = req.body.state;
     const error: string = req.body.error;
     const user: string = req.body.user;
 

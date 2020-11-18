@@ -1,0 +1,27 @@
+<div class="backup-card" *ngIf="backup">
+
+    <div class="backup-date">
+        Backup {{index+1}}: {{backup.date}}
+    </div>
+
+    <div class="backup-direction">
+        Direction: {{backup.direction}}
+    </div>
+
+    <div class="backup-state">
+        State: {{backup.state}}
+    </div>
+
+    <div class="backup-error">
+        Error: {{backup.error}}
+    </div>
+
+    <div class="backup-user">
+        User: {{backup.user}}
+    </div>
+    
+    <div class="center">
+        <button (click)="editBackup()" class="button">Edit Backup</button>
+    </div>
+
+</div>

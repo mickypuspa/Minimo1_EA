@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BackupsComponent } from './backups/backups.component';
+import { BackupCardComponent } from './backup-card/backup-card.component';
+import { BackupFormComponent } from './backup-form/backup-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BackupsComponent,
+    BackupCardComponent,
+    BackupFormComponent
   ],
   imports: [
     BrowserModule,

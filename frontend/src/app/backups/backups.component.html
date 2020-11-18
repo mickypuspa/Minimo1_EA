@@ -1,0 +1,15 @@
+<div class="text">
+    <h1>BACKUPS</h1>
+  </div>
+  
+  <div class="center">
+    <button (click)="addBackup()" class="button" >Add new backup</button>
+  </div>
+  
+  <div class="backups">
+      
+      <app-backup-card *ngFor="let backup of backups; index as i"
+        [backup]="backup" [backupIndex]="i">
+      </app-backup-card>  
+  
+  </div>

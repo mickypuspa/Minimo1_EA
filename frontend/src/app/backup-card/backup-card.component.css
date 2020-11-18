@@ -1,0 +1,30 @@
+.backup-card{
+    background-color:#a15703;
+  }
+  
+  /*.backup-phones{
+      margin: 10px;
+  }*/
+  
+  .backup-date {
+    font-weight: bold;
+  }
+  
+  .button {
+    background-color: #b88a0c; /* Gold */
+    border: black;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
+  .center {
+    text-align: center;
+  }

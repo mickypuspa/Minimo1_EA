@@ -1,0 +1,46 @@
+<div class="form">
+    <h2 class="login-header">BackupForm</h2>
+    <form [formGroup]="backupForm" class="login-container" (ngSubmit)="submitBackup()">
+      <input type="date" placeholder="Date*" formControlName="date" />
+      <ng-container
+        *ngIf="!formControls.date.valid &&formControls.date.touched"
+      >
+        <p *ngIf="formControls.name.errors.required">
+          Date is required
+        </p>
+      </ng-container>
+  
+      <input type="direction" placeholder="Direction(URL)*" formControlName="direction" />
+      <ng-container
+        *ngIf="!formControls.direction.valid &&formControls.direction.touched"
+      >
+        <p *ngIf="formControls.direction.errors.required">
+          Direction is required
+        </p>
+      </ng-container>
+  
+      <input type="state" placeholder="State*" formControlName="state" />
+      <ng-container
+        *ngIf="!formControls.state.valid &&formControls.state.touched"
+      >
+        <p *ngIf="formControls.phone1.errors.required">
+          State is required
+        </p>
+      </ng-container>
+
+      <input type="error" placeholder="Error" formControlName="error" />
+  
+      <input type="user" placeholder="User*" formControlName="user" />
+      <ng-container
+        *ngIf="formControls.user.touched && !formControls.user.valid"
+      >
+      <p *ngIf="formControls.user.errors.required">
+        User is required
+      </p>
+      </ng-container>
+  
+      <p>
+        <input type="submit" value="Submit" [disabled]="backupForm.invalid" />
+      </p>
+    </form>
+  </div>
