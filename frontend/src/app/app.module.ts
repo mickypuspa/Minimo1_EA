@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BackupsComponent } from './backups/backups.component';
 import { BackupCardComponent } from './backup-card/backup-card.component';
 import { BackupFormComponent } from './backup-form/backup-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { BackupFormComponent } from './backup-form/backup-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

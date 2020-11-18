@@ -13,7 +13,6 @@ export class BackupFormComponent implements OnInit {
 
   backupForm: FormGroup;
   isSubmitted = false;
-  backupDate;
   backupid;
   n = 1;
 
@@ -21,13 +20,13 @@ export class BackupFormComponent implements OnInit {
               private formBuilder: FormBuilder, private route: ActivatedRoute){ }
 
   ngOnInit(): void {
-    this.backupDate = this.route.snapshot.paramMap.get('backupDate');
     this.backupid = this.route.snapshot.paramMap.get('_id');
     this.backupForm = this.formBuilder.group({
-      date: ['', [Validators.required, Validators.nullValidator]],
-      direction: ['', [Validators.required, Validators.nullValidator]],
-      state: ['', [Validators.required, Validators.nullValidator]],
-      user: ['', [Validators.required, Validators.nullValidator]]
+      date: ['', [Validators.required]],
+      direction: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      error: [''],
+      user: ['', [Validators.required,]]
     });
   }
   get formControls(){
@@ -47,13 +46,10 @@ export class BackupFormComponent implements OnInit {
     const user = this.backupForm.value.user;
     let backup = {'_id': id,'date': date, 'direction': direction, 'state': state, 'error': error, 'user': user};
     console.log("New Backup!: ", backup);
-    if(this.backupDate==null) {
-      this.backupService.newBackup(backup)
+
+    this.backupService.newBackup(backup)
       .subscribe(() => {
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/home');
       });
-    } else {
-      this.router.navigateByUrl('/');
-      }
     }
   }

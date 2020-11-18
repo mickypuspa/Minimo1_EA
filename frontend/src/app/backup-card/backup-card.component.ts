@@ -22,7 +22,7 @@ export class BackupCardComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  updateBackup(backupId: string){
+  editBackup(backupId: string){
     this.router.navigateByUrl('/editBackup/' + backupId);
   }
 
